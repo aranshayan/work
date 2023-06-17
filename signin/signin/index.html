@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+</head>
+
+<body>
+
+<div class="container" id="container">
+
+	<div class="form-container log-in-container">
+		<form>
+			<h1>ثبت نام</h1>
+
+			<input type="text" placeholder="نام" id=" color-form"/>
+			<input type="email" placeholder="ایمیل" id=" color-form" />
+			<input type="password" placeholder="رمز عبور" id=" color-form" />
+
+			<button>ثبت نام</button>
+
+			<h3>یا</h3>
+
+			<div class="social-container">
+				<a  class="social"><i class="fab fa-google"></i></a>
+				<a  class="social"><i class="fab fa-apple"></i></a>
+			</div>
+		</form>
+	</div>
+
+	<div class="form-container sign-in-container">
+		<form>
+			<h1>ورود</h1>
+
+			<input type="email" placeholder="ایمیل" />
+			<input type="password" placeholder="رمز عبور" />
+
+			<a id="forgot" >رمز عبور خود را فراموش کردید؟</a>   
+
+
+			<button>ورود</button>
+
+			<h3>یا</h3>
+
+			<div class="social-container">
+				<a  class="social"><i class="fab fa-apple"></i></a>
+				<a  class="social"><i class="fab fa-google"></i></a>
+			</div>
+		</form>
+	</div>
+
+
+
+	<div class="overlay-container">
+		<div class="overlay">
+
+			<div class="overlay-panel overlay-left">
+				<h1>خوش امدید</h1>
+				<button class="ghost" id="signIn">ورود</button>
+			</div>
+
+			<div class="overlay-panel overlay-right">
+				<h1>سلام</h1>
+				<button class="ghost" id="signup">ثبت نام</button>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>

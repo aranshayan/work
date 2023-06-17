@@ -1,0 +1,155 @@
+* {
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #F5F5F5;
+}
+
+.right-container{
+
+    position: absolute;
+    width: 485px;
+    height: 250px;
+    left: 197px;
+    top: 350px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 38px -11px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;}
+
+
+.main-container{
+
+
+    position: absolute;
+    width: 485px;
+    height: 250px;
+    left: 780px;
+    top: 350px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 38px -11px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+
+}
+
+
+.left-container{
+    
+    position: absolute;
+    width: 485px;
+    height: 250px;
+    right: 197px;
+    top: 350px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 38px -11px rgba(0, 0, 0, 0.18);
+    border-radius: 10px;
+}
+
+.mini-content{    
+
+    position: absolute;
+    width: 141px;
+    height: 47px;
+    left: 17px;
+    top: 9px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 38px -11px rgba(0, 0, 0, 0.18);
+    border-radius: 31px;
+
+
+}
+
+.satna-logo{ 
+
+    position: absolute;
+    width: 111px;
+    height: 111px;
+    left: 55px;
+    top: 75px;
+    background-color: #FFFFFF;
+}
+
+
+.satna-name{
+    position: absolute;
+    width: 211px;
+    height: 111px;
+    left: 200px;
+    top: 75px;
+
+    background-color: #FFFFFF;
+}
+
+
+.pol-logo{
+
+
+    position: absolute;
+    width: 111px;
+    height: 111px;
+    left: 55px;
+    top: 75px;
+    background-color: #FFFFFF;
+
+}
+    
+
+.pol-name{
+
+    position: absolute;
+    width: 211px;
+    height: 111px;
+    left: 200px;
+    top: 75px;
+
+    background-color: #FFFFFF;
+}
+
+
+.paya-name {
+    position: absolute;
+    width: 211px;
+    height: 111px;
+    left: 200px;
+    top: 75px;
+
+    background-color: #FFFFFF;
+
+
+    }
+.paya-logo{
+
+    position: absolute;
+    width: 111px;
+    height: 111px;
+    left: 55px;
+    top: 75px;
+
+    background-color: #FFFFFF;
+    }
+
+#bell{
+    
+        position: absolute;
+        left: 6%;
+        top: 23px;
+        background-color: #FFFFFF;
+        color: #FFFFFF;
+    }
+#flag{
+        position: absolute;
+        left: 2%;
+        top: 16px;
+        color: #FFFFFF;
+
+        background-color: #FFFFFF;
+
+    }
+    
+#vector{
+        position: absolute;
+        left: 90px;
+        top: 20px;
+        color: #FFFFFF;
+        background-color: #FFFFFF;
+
+    }

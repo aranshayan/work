@@ -1,0 +1,292 @@
+
+* 
+{
+	box-sizing: border-box;
+}
+
+body 
+{
+	background-image:url(w\ \(17\).jpeg);
+	background-size:cover;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+
+	display:flex;
+	justify-content: center;
+	align-items: center;
+    font-family:'Iranian Sans';
+	margin: -20px 0 50px;
+}
+
+h1 
+{
+	font-weight: bold;
+	margin:20px;
+	font-family:'Iranian Sans';
+
+}
+
+
+p 
+{
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+	font-family:'Iranian Sans';
+
+}
+
+
+span 
+{
+	font-size: 12px;
+}
+
+a 
+{
+	color: #000000;
+	font-size: 14px;
+	text-decoration: none;
+	font-family:'Iranian Sans';
+	margin: 15px 0;
+}
+input{
+	direction: rtl;
+}
+button 
+{
+	border-radius: 20px;
+	border: 1px solid #F2eee3;
+	background-color: #000000;
+	color: rgb(255, 255, 255);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 15px 70px;
+	margin-top: 10px;
+	transition: transform 80ms ease-in;
+	border-color: rgb(255, 255, 255);
+}
+
+button:active 
+{
+	transform: scale( 1.1 , 1.1 )
+}
+
+button:focus 
+{
+	outline: none;
+}
+
+button.ghost 
+{
+	background-color: transparent;
+}
+
+form 
+{
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+    font-family:'Iranian Sans';
+	text-align: center;
+}
+
+input 
+{
+	background-color: #000000;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+	color: #FFFFFF;
+	border-radius: 20px;
+	font-family:'Iranian Sans';
+
+}
+
+.container
+{
+	background-color: #ffffff;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	width: 770px;
+	max-width: 100%;
+	min-height: 500px;
+	justify-content: center;
+	align-items: center;
+	left: 1%;
+}
+
+.form-container 
+{
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container 
+{
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container 
+{
+	transform: translateX(100%);
+}
+
+.log-in-container 
+{
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .log-in-container 
+{
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+	
+}
+.ira{    
+	font-family:'Iranian Sans';
+
+}
+@keyframes show 
+{
+	0%, 50% {
+		opacity: 0;
+		z-index: 1;
+	}
+
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+.overlay 
+{
+	background: #000000;
+	background: linear-gradient(to right, #000000, #000000);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: rgb(255, 255, 255);
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-container 
+{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 107%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;	
+	align-items: center;
+
+
+}
+
+.container.right-panel-active .overlay-container
+{
+	transform: translateX(-100%);
+}	
+
+
+
+.container.right-panel-active .overlay 
+{
+  	transform: translateX(50%);
+}
+
+.overlay-panel 
+{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+	background: #000000;
+
+}
+
+.overlay-left 
+{
+	transform: translateX(-20%);
+	background-color: #000000;
+
+}
+
+.container.right-panel-active .overlay-left 
+{
+	transform: translateX(0);
+
+}
+
+.overlay-right 
+{
+	right: 0;
+	transform: translateX(0);
+	background-color: #000000;
+
+}
+
+.container.right-panel-active .overlay-right 
+{ 
+	transform: translateX(20%);
+	background: #000000;
+
+}
+
+.social-container 
+{
+	margin: 20px 0;
+
+}
+
+.social-container a
+{
+	border: 1px solid rgb(0, 0, 0);
+	border-radius: 25%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+	background: #ffffff;
+	
+}
+.social-container a:hover{
+	transform: rotate( 360deg );
+	transition:0.8s;
+
+}
