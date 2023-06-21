@@ -30,11 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
   })
     .then(response => {
       if (response.ok) {
-        return response.json()
+        return response.json();
       } else {
-        throw new Error('رمز اشتباه هست');
+        throw new Error('Incorrect password');
       }
     })
+    .then(() => {
+      window.location.href = "http://digikala.com";
+    })
+    
     .then(result => {
       console.log('Success:', result);
     })
@@ -48,3 +52,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById('login-btn').addEventListener('click', login);
 });
+
+
+const signUp = async () => {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password2').value;
+  const url = 'https://reqres.in/api/register';
+  const data = { email, password };
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (!response.ok) {
+      throw new Error('Failed to create account');
+    }
+    const result = await response.json();
+    console.log('Success:', result);
+  } catch (error) {
+    console.debug('Error:', error.message);
+    alert(error.message);
+  }
+};
+
+document.getElementById('signup-btn').addEventListener('click', signUp);

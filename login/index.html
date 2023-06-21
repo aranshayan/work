@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SignIn SignUp</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-    ></script>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Sign Up</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/64d58efce2.js"></script>
   </head>
   <body>
     <div class="container">
@@ -18,14 +15,13 @@
             <h2 class="title">ورود</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="نام کاربری" />
+              <input type="text" id="username" name="username" autocomplete="username" required>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="رمزعبور" />
+              <input type="password" id="password" name="password" autocomplete="current-password" required>
             </div>
-            <input type="submit" value="ورود" class="btn solid" />
-
+            <input type="button" value="ورود" class="btn solid" id="login-btn">
             <p class="social-text">یا استفاده از پلتفرم</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -42,23 +38,21 @@
               </a>
             </div>
           </form>
-
-
           <form action="" class="sign-up-form">
             <h2 class="title">ثبت نام</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="نام کاربری" />
+              <input type="text" placeholder="نام کاربری">
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="ایمیل" />
+              <input type="email" id="email" name="email" autocomplete="email" required>
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="رمزعبور" />
+              <input type="password" id="password2" name="password" autocomplete="current-password" required>
             </div>
-            <input type="submit" value="ثبت نام" class="btn solid" />
+            <input type="button" value="ثبت نام" class="btn solid" id="signup-btn">
 
             <p class="social-text">یا استفاده از پلتفرم</p>
             <div class="social-media">
@@ -79,26 +73,18 @@
         </div>
       </div>
       <div class="panels-container">
-
         <div class="panel left-panel">
             <div class="content">
-                <h3>تازه اید؟</h3>
                 <button class="btn transparent" id="sign-up-btn">ثبت نام</button>
             </div>
-            <img src="./img/.svg" class="image" alt="">
         </div>
-
         <div class="panel right-panel">
             <div class="content">
-                <h3>یکی از ما؟</h3>
-                <p>تماس با ما</p>
                 <button class="btn transparent" id="sign-in-btn">ورود</button>
             </div>
-            <img src="./img/.svg" class="image" alt="">
         </div>
       </div>
     </div>
-
     <script src="./app.js"></script>
   </body>
 </html>
