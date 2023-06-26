@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 const App = () => {
 
   const [isSignUp, setIsSignUp] = useState(false); // set initial state to false
@@ -87,11 +86,11 @@ const App = () => {
               <i className="fas fa-lock"></i>
               <input type="password" placeholder="رمز عبور" id="password" />
             </div>
-            <input type="button" value="Login" className="btn solid" id="login-btn" onClick={handleLogin} />
+            <input type="button" value="ثبت نام" className="btn solid" id="login-btn" onClick={handleLogin} />
           </form>
 
           <form className="sign-up-form">
-            <h2 className="title">ثبت نام</h2>
+            <span><h2 className="title">ثبت نام</h2></span>
             <div className="input-field">
               <i className="fas fa-envelope"></i>
               <input type="email" placeholder="ایمیل" id="email" />
