@@ -1,6 +1,10 @@
 import './App.css';
 import React, { useState } from 'react';
 import { AiOutlineUser } from 'react-icons/ai';
+import { AiFillMail } from 'react-icons/ai';
+import { AiOutlineUserAdd } from 'react-icons/ai';
+import { MdPassword } from 'react-icons/md';
+
 
 const App = () => {
 
@@ -81,27 +85,24 @@ const App = () => {
         <div className="signin-signup">
           <form className="sign-in-form">
             <h2 className="title">ورود</h2>
-      <i className="fa-solid fa-user"></i>
-
-            <div className="input-field">
-               
-             <AiOutlineUser input type="text" placeholder="نام کاربری" id="username" autoComplete='currennt-username'/>
+          <div className="input-field">
+            <AiOutlineUserAdd className="icon" />
+            <input type="text" placeholder="نام کاربری" id="username" autoComplete='currennt-username'/>
             </div>
             <div className="input-field">
-              {/* <i className="fas fa-lock"></i> */}
+            <MdPassword className="icon" />
               <input type="password" placeholder="رمز عبور" id="password" autoComplete='current-password'/>
             </div>
             <input type="button" value="ثبت نام" className="btn solid" id="login-btn" onClick={handleLogin} />
           </form>
-
           <form className="sign-up-form">
             <span><h2 className="title">ثبت نام</h2></span>
             <div className="input-field">
-              {/* <i className="fas fa-envelope"></i> */}
+            <AiFillMail className="icon"/>
               <input type="email" placeholder="ایمیل" id="email" />
             </div>
             <div className="input-field">
-              {/* <i className="fas fa-lock"></i> */}
+            <AiOutlineUser className="icon" />
               <input type="password" placeholder="رمز عبور" id="password2" />
             </div>
             <input type="button" className="btn" value="ثبت نام" id="signup-btn" onClick={handleSignUp} />
@@ -112,15 +113,15 @@ const App = () => {
       <div className="panels-container">
         <div className="panel left-panel">
           <div className="content">
-            <h3>میخواهید عضو شوید</h3>
-            <p>برای ثبت نام اینجا کلیک کنید</p>
+            <span><h3>میخواهید عضو شوید</h3></span>
+            <span><p>برای ثبت نام اینجا کلیک کنید</p></span>
             <button className="btn transparent" id="sign-up-btn" onClick={handleSignUpClick}>ثبت نام</button>
           </div>
           <img src="img/log.svg" className="image" alt="" />
         </div>
         <div className="panel right-panel">
           <div className="content">
-            <h3>آیا اکانت دارید؟</h3>
+         <h3>آیا اکانت دارید؟</h3>
             <button className="btn transparent" id="sign-in-btn" onClick={handleSignInClick}>ورود</button>
           </div>
           <img src="img/register.svg" className="image" alt="" />

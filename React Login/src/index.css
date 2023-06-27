@@ -1,17 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h3{
+  margin-bottom:30px;
 }
 
 * {
@@ -19,7 +13,7 @@ code {
   padding: 0;
   box-sizing: border-box;
 }
-
+ 
 input {
   font-family: "Poppins", sans-serif;
 }
@@ -80,7 +74,7 @@ form.sign-in-form {
 }
 
 .icon{
-  margin-top: 5%;
+  margin: 20px;
 }
 
 .input-field {
@@ -418,3 +412,7 @@ form.sign-in-form {
     left: 50%;
   }
 }
+@font-face {
+  font-family: vazir;
+  src: url("A:\work\React Login\vazir\Vazir-Bold.woff");
+} 
