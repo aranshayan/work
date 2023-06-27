@@ -1,8 +1,6 @@
+import './App.css';
 import React, { useState } from 'react';
-
-import { FaBeer } from 'react-icons/fa';
-
-<h3> Lets go for a <FaBeer />? </h3>
+import { AiOutlineUser } from 'react-icons/ai';
 
 const App = () => {
 
@@ -83,13 +81,11 @@ const App = () => {
         <div className="signin-signup">
           <form className="sign-in-form">
             <h2 className="title">ورود</h2>
-      {/* <FontAwesomeIcon icon="fa-solid fa-user" /> */}
-      {/* <FontAwesomeIcon icon="fa-solid fa-check-square" /> */}
       <i className="fa-solid fa-user"></i>
-<label>sfsgsddf </label>
+
             <div className="input-field">
-              {/* <i className="fas fa-user"></i> */}
-              <input type="text" placeholder="نام کاربری" id="username" autoComplete=''/>
+               
+             <AiOutlineUser input type="text" placeholder="نام کاربری" id="username" autoComplete='currennt-username'/>
             </div>
             <div className="input-field">
               {/* <i className="fas fa-lock"></i> */}
@@ -135,3 +131,4 @@ const App = () => {
 }
 
 export default App;
+
