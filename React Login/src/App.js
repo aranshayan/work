@@ -4,6 +4,9 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { AiFillMail } from 'react-icons/ai';
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import { MdPassword } from 'react-icons/md';
+import { FcGoogle } from 'react-icons/fc';
+import { BsApple } from 'react-icons/bs';
+import { BsMicrosoft } from 'react-icons/bs';
 
 
 const App = () => {
@@ -94,6 +97,12 @@ const App = () => {
               <input type="password" placeholder="رمز عبور" id="password" autoComplete='current-password'/>
             </div>
             <input type="button" value="ثبت نام" className="btn solid" id="login-btn" onClick={handleLogin} />
+              <p className="social-text">یا استفاده از پلتفرم</p>
+              <div className="social-media">
+              <FcGoogle className="social-icon"/>
+                <BsApple className="social-icon"/>
+                <BsMicrosoft className="social-icon"/>
+              </div>
           </form>
           <form className="sign-up-form">
             <span><h2 className="title">ثبت نام</h2></span>
@@ -106,10 +115,17 @@ const App = () => {
               <input type="password" placeholder="رمز عبور" id="password2" />
             </div>
             <input type="button" className="btn" value="ثبت نام" id="signup-btn" onClick={handleSignUp} />
+            <div>
+              <p className="social-text">یا استفاده از پلتفرم</p>
+              <div className="social-media">
+              <FcGoogle className="social-icon"/>
+                <AiOutlineUserAdd className="social-icon"/>
+                  <BsMicrosoft className="social-icon"/>
+              </div>
+            </div>
           </form>
         </div>
       </div>
-
       <div className="panels-container">
         <div className="panel left-panel">
           <div className="content">

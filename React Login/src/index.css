@@ -3,19 +3,18 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: vazir;
 }
 h3{
   margin-bottom:30px;
 }
-
+input{
+  font-family: vazir;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
- 
-input {
-  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -114,7 +113,7 @@ form.sign-in-form {
 }
 
 .social-text {
-  padding: 0.7rem 0;
+  padding: 1.7rem 56px;
   font-size: 1rem;
 }
 
@@ -129,14 +128,13 @@ form.sign-in-form {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0.45rem;
+  padding: 10px;
+  margin: 24px 0.45rem;
   color: #333;
   border-radius: 50%;
   border: 1px solid #333;
   text-decoration: none;
   font-size: 1.1rem;
-  font-family:'vazir';
-
   transition: 0.3s;
 }
 
@@ -158,6 +156,7 @@ form.sign-in-form {
   margin: 10px 0;
   cursor: pointer;
   transition: 0.5s;
+  font-family: vazir;
 }
 
 .btn:hover {
@@ -413,6 +412,6 @@ form.sign-in-form {
   }
 }
 @font-face {
-  font-family: vazir;
-  src: url("A:\work\React Login\vazir\Vazir-Bold.woff");
+  font-family: Vazir;
+  src: url("A:\work\React Login\fonts\Vazir-Medium.ttf");
 } 
