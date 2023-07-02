@@ -8,10 +8,9 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsApple } from 'react-icons/bs';
 import { BsMicrosoft } from 'react-icons/bs';
 
-
 const App = () => {
 
-  const [isSignUp, setIsSignUp] = useState(false); // set initial state to false
+  const [isSignUp, setIsSignUp] = useState(false);
 
   const handleSignInClick = () => {
     setIsSignUp(false);
@@ -22,7 +21,7 @@ const App = () => {
   }
 
   const handleLogin = async () => {
-
+     
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
@@ -71,7 +70,7 @@ const App = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to create account');
+        throw new Error('ثبت نام با مشکل  روبرو شد');
       }
 
       const result = await response.json();
@@ -86,42 +85,44 @@ const App = () => {
     <div className={`container ${isSignUp ? "sign-up-mode" : ""}`}>
       <div className="forms-container">
         <div className="signin-signup">
+
           <form className="sign-in-form">
             <h2 className="title">ورود</h2>
           <div className="input-field">
             <AiOutlineUserAdd className="icon" />
             <input type="text" placeholder="نام کاربری" id="username" autoComplete='currennt-username'/>
-            </div>
-            <div className="input-field">
+          </div>
+          <div className="input-field">
             <MdPassword className="icon" />
               <input type="password" placeholder="رمز عبور" id="password" autoComplete='current-password'/>
-            </div>
+          </div>
             <input type="button" value="ثبت نام" className="btn solid" id="login-btn" onClick={handleLogin} />
               <p className="social-text">یا استفاده از پلتفرم</p>
-              <div className="social-media">
-              <FcGoogle className="social-icon"/>
-                <BsApple className="social-icon"/>
-                <BsMicrosoft className="social-icon"/>
-              </div>
+          <div className="social-media">
+            <FcGoogle className="social-icon"/>
+              <BsApple className="social-icon"/>
+               <BsMicrosoft className="social-icon"/>
+          </div>
           </form>
+          
           <form className="sign-up-form">
             <span><h2 className="title">ثبت نام</h2></span>
             <div className="input-field">
             <AiFillMail className="icon"/>
-              <input type="email" placeholder="ایمیل" id="email" />
+              <input type="email" placeholder="ایمیل" id="email" autoComplete='currennt-email' />
             </div>
             <div className="input-field">
             <AiOutlineUser className="icon" />
-              <input type="password" placeholder="رمز عبور" id="password2" />
+              <input type="password" placeholder="رمز عبور" id="password2" autoComplete='current-password'/>
             </div>
             <input type="button" className="btn" value="ثبت نام" id="signup-btn" onClick={handleSignUp} />
             <div>
               <p className="social-text">یا استفاده از پلتفرم</p>
               <div className="social-media">
               <FcGoogle className="social-icon"/>
-                <AiOutlineUserAdd className="social-icon"/>
+                <BsApple className="social-icon"/>
                   <BsMicrosoft className="social-icon"/>
-              </div>
+              </div>                
             </div>
           </form>
         </div>
@@ -131,16 +132,14 @@ const App = () => {
           <div className="content">
             <span><h3>میخواهید عضو شوید</h3></span>
             <span><p>برای ثبت نام اینجا کلیک کنید</p></span>
-            <button className="btn transparent" id="sign-up-btn" onClick={handleSignUpClick}>ثبت نام</button>
+            <button className="btn transparent" id="sign-up-btns" onClick={handleSignUpClick}>ثبت نام</button>
           </div>
-          <img src="img/log.svg" className="image" alt="" />
         </div>
         <div className="panel right-panel">
           <div className="content">
          <h3>آیا اکانت دارید؟</h3>
             <button className="btn transparent" id="sign-in-btn" onClick={handleSignInClick}>ورود</button>
           </div>
-          <img src="img/register.svg" className="image" alt="" />
         </div>
       </div>
     </div>
