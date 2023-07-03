@@ -21,7 +21,6 @@ const App = () => {
   }
 
   const handleLogin = async () => {
-     
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
@@ -42,12 +41,12 @@ const App = () => {
       });
 
       if (!response.ok) {
-        throw new Error('Incorrect password');
+        throw new Error('رمز عبور اشتباه هست');
       }
 
       const result = await response.json();
       console.log('Success:', result);
-      window.location.href = "http://digikala.com";
+      window.location.href = 'https://www.zoomit.ir/'
     } catch (error) {
       console.debug('Error:', error.message);
       alert(error.message);
@@ -70,7 +69,7 @@ const App = () => {
       });
 
       if (!response.ok) {
-        throw new Error('ثبت نام با مشکل  روبرو شد');
+        throw new Error('ثبت نام با مشکل روبرو شد');
       }
 
       const result = await response.json();
@@ -82,6 +81,7 @@ const App = () => {
   }
 
   return (
+
     <div className={`container ${isSignUp ? "sign-up-mode" : ""}`}>
       <div className="forms-container">
         <div className="signin-signup">
@@ -96,7 +96,7 @@ const App = () => {
             <MdPassword className="icon" />
               <input type="password" placeholder="رمز عبور" id="password" autoComplete='current-password'/>
           </div>
-            <input type="button" value="ثبت نام" className="btn solid" id="login-btn" onClick={handleLogin} />
+            <input type="button" value="ورود" className="btn solid" id="login-btn" onClick={handleLogin} />
               <p className="social-text">یا استفاده از پلتفرم</p>
           <div className="social-media">
             <FcGoogle className="social-icon"/>
@@ -127,6 +127,7 @@ const App = () => {
           </form>
         </div>
       </div>
+
       <div className="panels-container">
         <div className="panel left-panel">
           <div className="content">
@@ -135,12 +136,14 @@ const App = () => {
             <button className="btn transparent" id="sign-up-btns" onClick={handleSignUpClick}>ثبت نام</button>
           </div>
         </div>
+
         <div className="panel right-panel">
           <div className="content">
-         <h3>آیا اکانت دارید؟</h3>
+         <h3>آیا حساب کاربری دارید؟</h3>
             <button className="btn transparent" id="sign-in-btn" onClick={handleSignInClick}>ورود</button>
           </div>
         </div>
+
       </div>
     </div>
   )
